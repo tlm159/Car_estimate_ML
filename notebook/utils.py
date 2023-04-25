@@ -38,6 +38,10 @@ def convert_units(df):
     df[['empattement', 'longueur_voiture', 'largeur_voiture', 'hauteur_voiture']] = df[['empattement', 'longueur_voiture', 'largeur_voiture', 'hauteur_voiture']].round(1)
     df[['consommation_ville', 'consommation_autoroute']] = 235.215 / df[['consommation_ville', 'consommation_autoroute']]
     df[['consommation_ville', 'consommation_autoroute']] = df[['consommation_ville', 'consommation_autoroute']].round(2)
+    df['taux_alésage'] = df['taux_alésage'] * 25.4
+    df['course'] = df['course'] * 25.4
+    df['taux_alésage'] = df['taux_alésage'].round(1)
+    df['course'] = df['course'].round(1)
     return df
 
 def split_brand_and_model(df):
