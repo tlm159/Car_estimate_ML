@@ -73,3 +73,49 @@ def translate_columns(df):
         'rear': 'arrière'
     }
     return df.replace(translation_dict)
+
+def clean_car_brands(brand):
+    brand_mapping = {
+        "TOYOUTA": "TOYOTA",
+        "MAXDA": "MAZDA",
+        "VW": "VOLKSWAGEN",
+        "VOKSWAGEN": "VOLKSWAGEN",
+        "PORCSHCE": "PORSCHE",
+        "ALFA-ROMERO": "ALFA-ROMEO"
+    }
+
+    if brand in brand_mapping:
+        return brand_mapping[brand]
+    else:
+        return brand
+    
+def clean_car_models(model):
+    model_mapping = {
+        "5000S(DIESEL)": "5000S DIESEL",
+        "ACCORDCVCC": "ACCORD CVCC",
+        "COLT(SW)": "COLT SW",
+        "CORONETCUSTOM(SW)": "CORONET CUSTOM SW",
+        "CIVIC(AUTO)": "CIVIC AUTO",
+        "D-MAXV-CROSS": "D-MAX V-CROSS",
+        "OPELISUZUDELUXE": "OPEL ISUZU DELUXE",
+        "REGALSPORTCOUPE(TURBO)": "REGAL SPORT COUPE TURBO",
+        "COROLLALIFTBACK": "COROLLA LIFTBACK",
+        "CELICAGTLIFTBACK": "CELICA GT LIFTBACK",
+        "COROLLATERCEL": "COROLLA TERCEL",
+        "CORONALIFTBACK": "CORONA LIFTBACK",
+        "CELICAGT": "CELICA GT",
+        "1131DELUXESEDAN": "1131 DELUXE SEDAN",
+        "RABBITCUSTOM": "RABBIT CUSTOM",
+        "145E(SW)": "145E SW",
+        "244DL": "244 DL",
+        "264GL": "264 GL",
+        "COROLLA1600(SW)": "COROLLA 1600 SW",
+        "504(SW)": "504 SW",
+        "SATELLITECUSTOM(SW)": "SATELLITE CUSTOM SW"
+    }
+
+    if model in model_mapping:
+        return model_mapping[model]
+    else:
+        return model
+
