@@ -14,9 +14,16 @@ def display_car_features_form(data):
     
     car_features = get_car_features(data)
     
+    # Ajout des nouvelles caractéristiques
+    car_features['rapport_poids_puissance'] = car_features['poids_vehicule'] / car_features['chevaux']
+    car_features['consommation_combinee'] = (car_features['consommation_ville'] + car_features['consommation_autoroute']) / 2
+    
+    print(car_features)
+    
     st.markdown("---")
     
     return car_features
+
 
 def get_car_features(data):
     """
@@ -29,13 +36,12 @@ def get_car_features(data):
     dict: Dictionnaire contenant les caractéristiques sélectionnées.
     """
     numerical_columns = ['empattement', 'longueur_voiture', 'largeur_voiture', 'poids_vehicule', 'taille_moteur', 'taux_alésage', 'chevaux', 'consommation_ville', 'consommation_autoroute']
-    categorical_columns = ['etat_de_route', 'turbo', 'type_vehicule', 'roues_motrices', 'emplacement_moteur', 'marque']
+    categorical_columns = ['type_vehicule', 'roues_motrices', 'marque']
 
     # Récupère les caractéristiques catégorielles de la voiture à partir du formulaire.
     car_features = get_categorical_features(data, categorical_columns)
     # Met à jour le dictionnaire des caractéristiques avec les caractéristiques numériques récupérées à partir du formulaire.
     car_features.update(get_numerical_features(data, numerical_columns))
-
 
     return car_features
 

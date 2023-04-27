@@ -6,3 +6,5 @@ ydata_profiling
 sklearn
 streamlit
 pickle
+fastapi
+uvinorn

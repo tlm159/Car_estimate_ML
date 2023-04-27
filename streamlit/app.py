@@ -18,6 +18,12 @@ def main():
     # Créer un DataFrame avec les caractéristiques de la voiture sélectionnées
     car_features_df = pd.DataFrame(car_features, index=[0])
 
+    # Liste des colonnes dans l'ordre utilisé pour entraîner le modèle
+    column_order = ['type_vehicule', 'roues_motrices',  'modele' , 'marque' ,'empattement', 'longueur_voiture', 'largeur_voiture', 'poids_vehicule', 'taille_moteur', 'taux_alésage', 'chevaux', 'consommation_ville', 'consommation_autoroute', 'rapport_poids_puissance', 'consommation_combinee']
+
+    # Crée un nouveau DataFrame avec les colonnes dans le bon ordre
+    car_features_df = car_features_df[column_order]
+
     # Prédire le prix de la voiture en fonction des caractéristiques sélectionnées
     predicted_price = model.predict(car_features_df)
 
