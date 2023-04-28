@@ -102,8 +102,8 @@ Voici les étapes pour entraîner un modèle de prédiction de prix de voitures 
 ## Conclusion
 En conclusion, ce projet de prédiction de prix de voitures d'occasion a permis de mettre en pratique les étapes de préparation de données, d'analyse de données et de création de modèle. Les résultats de l'analyse de données ont été utilisés pour entraîner un modèle de prédiction de prix de voiture avec une précision raisonnable. Ce projet peut servir de base pour des projets similaires et a permis de comprendre l'importance de chaque étape dans le processus de création de modèle de prédiction.
 
-## Licence
+## Licence
 Ce projet est sous licence ``MIT`` - voir le fichier [LICENSE](LICENSE) pour plus d'informations.
 
-# Auteurs
+## Auteurs
 * **Thomas.l59** _alias_ [@DonzerHD](https://github.com/DonzerHD)
