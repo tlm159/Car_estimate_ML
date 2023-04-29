@@ -92,7 +92,7 @@ Voici les étapes pour entraîner un modèle de prédiction de prix de voitures 
 ## Streamlit
 - Se placer dans le dossier `streamlit`
 - Lancer l'application avec la commande `streamlit run app.py`
-- Le dossier se compose de 2 fichiers:
+- Le dossier se compose de 3 fichiers:
     - `app.py`: Fichier contenant le code de l'application.
     - `components.py`: Fichier contenant les fonctions pour les composants de l'application.
     - `utils.py`: Fichier contenant les fonctions utilitaires pour l'application.
