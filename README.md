@@ -104,6 +104,3 @@ En conclusion, ce projet de prédiction de prix de voitures d'occasion a permis 
 
 ## Licence
 Ce projet est sous licence ``MIT`` - voir le fichier [LICENSE](LICENSE) pour plus d'informations.
-
-## Auteurs
-* **Thomas.l59** _alias_ [@DonzerHD](https://github.com/DonzerHD)
